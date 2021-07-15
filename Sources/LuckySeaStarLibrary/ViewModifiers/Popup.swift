@@ -33,3 +33,44 @@ public struct Popup<T:View> : ViewModifier {
         }
     }
 }
+
+/*
+ 사용예시
+ import SwiftUI
+ import LuckySeaStarLibrary
+
+ struct ContentView: View {
+     @State var isPopupPresented :Bool = false
+     var body: some View {
+         VStack {
+             Button(action:{
+                 isPopupPresented = true
+             }){
+                 Text("show")
+             }
+         }
+         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+         .modifier(Popup(isPresented: isPopupPresented, content:{
+                 ZStack {
+                     Rectangle()
+                         .fill(Color.red)
+                     VStack {
+                         Button(action:{
+                             isPopupPresented = false
+                         }) {
+                             Text("hide------------------------")
+                                 .foregroundColor(Color.white)
+                         }
+                     }
+                 }
+                 .border(Color.blue, width:1)
+         }))
+     }
+ }
+ 
+ struct ContentView_Previews: PreviewProvider {
+     static var previews: some View {
+         ContentView()
+     }
+ }
+ */

@@ -26,8 +26,25 @@ public struct LineView: View {
     }
 }
 
-//struct LineView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LineView()
-//    }
-//}
+
+ /*
+  사용예시
+  import SwiftUI
+  import LuckySeaStarLibrary
+
+  struct ContentView: View {
+      var body: some View {
+         VStack {
+             LineView()
+             LineView(color: Color.red, height: 1)
+             LineView(color: Color.blue, height : 8)
+         }
+      }
+  }
+  
+  struct ContentView_Previews: PreviewProvider {
+      static var previews: some View {
+          ContentView()
+      }
+  }
+  */
