@@ -9,6 +9,7 @@ import SwiftUI
 
 
 public struct LineView: View {
+    public init()  { }
     public var body: some View {
            Rectangle()
             .foregroundColor(Color.gray)
