@@ -9,17 +9,25 @@ import SwiftUI
 
 
 public struct LineView: View {
-    public init()  { }
+    private let color: Color
+    private let height: CGFloat
+    public init(
+        color: Color = Color.gray ,
+        height : CGFloat = 1
+    )  {
+        self.color = color
+        self.height = height
+    }
     public var body: some View {
            Rectangle()
-            .foregroundColor(Color.gray)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 1 , maxHeight: 1)
+            .foregroundColor(color)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: height , maxHeight: height)
         
     }
 }
 
-struct LineView_Previews: PreviewProvider {
-    static var previews: some View {
-        LineView()
-    }
-}
+//struct LineView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LineView()
+//    }
+//}
