@@ -8,8 +8,8 @@
 import SwiftUI
 
 
-struct LineView: View {
-    var body: some View {
+public struct LineView: View {
+    public var body: some View {
            Rectangle()
             .foregroundColor(Color.gray)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 1 , maxHeight: 1)
