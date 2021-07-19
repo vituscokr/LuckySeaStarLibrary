@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum MyDateStringFormat : String {
+public enum MyDateStringFormat : String {
     case defaultFormat = "yyyy-MM-dd"
     case defaultDateTime = "yyyy-MM-dd  HH:mm"
     case defaultDateTimeSecond = "yyyy-MM-dd  HH:mm:ss"
@@ -24,7 +24,7 @@ enum MyDateStringFormat : String {
 }
 
 extension Date {
-    static var currentTimeStamp: Int64{
+    public static var currentTimeStamp: Int64{
         //return Int64(Date().timeIntervalSince1970 * 1000)
         return Int64(Date().timeIntervalSince1970 * 1000)
     }
