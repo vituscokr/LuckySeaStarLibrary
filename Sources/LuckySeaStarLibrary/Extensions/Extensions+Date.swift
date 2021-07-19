@@ -30,11 +30,11 @@ extension Date {
     }
     
     //timestamp 에서 데이트를 구함
-    func getDate(from:Int)  -> Date {
+    public func getDate(from:Int)  -> Date {
         return  Date(timeIntervalSince1970: TimeInterval(from / 1000))
         
     }
-    func string(type:MyDateStringFormat) -> String {
+    public func string(type:MyDateStringFormat) -> String {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = type.rawValue
             dateFormatter.locale = Locale(identifier: "ko_KR")
@@ -42,7 +42,7 @@ extension Date {
     }
     
     
-    var timestamp:Int64 {
+    public var timestamp:Int64 {
         return Int64(self.timeIntervalSince1970 * 1000)
     }    
 }
