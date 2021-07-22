@@ -8,7 +8,7 @@
 import Foundation
 
 public class Debug {
-    enum DebugLineType {
+    public enum DebugLineType {
         case signle
         case double
         case plus
