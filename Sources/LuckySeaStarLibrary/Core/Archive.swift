@@ -12,7 +12,7 @@ public class Archive {
     
 
     public static var docsDir : NSString {
-        let fileManager = FileManager.default
+
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
         return docsDir
@@ -37,7 +37,7 @@ public class Archive {
     public class func read(filename: String ) ->JSON? {
 
         let dataFilePath =  Archive.docsDir.appendingPathComponent(filename )
-        if fileManager.fileExists(atPath: dataFilePath) {
+        if FileManager.default.fileExists(atPath: dataFilePath) {
             
             
             
@@ -65,9 +65,9 @@ public class Archive {
     public class func remove(filename : String ) {
 
         let dataFilePath =  Archive.docsDir.appendingPathComponent(filename )
-        if fileManager.fileExists(atPath: dataFilePath) {
+        if FileManager.default.fileExists(atPath: dataFilePath) {
             do {
-                try fileManager.removeItem(atPath: dataFilePath)
+                try FileManager.default.removeItem(atPath: dataFilePath)
             }catch {
                 Debug.log("파일을 삭제하지 못하였습니다.")
             }
