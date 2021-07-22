@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 public enum MyDateStringFormat : String {
     case defaultFormat = "yyyy-MM-dd"
